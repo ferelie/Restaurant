@@ -1,14 +1,19 @@
-import { Fragment } from "react";
+import classes from "./mealsList.module.css";
 import DUMMY_MEALS from "./dummyList";
+import Card from "../UI/Card";
+import MealItem from "./MealItem/MealItem";
 
 const MealsList = () => {
-
-  const listOfMeals = DUMMY_MEALS.map((meal) => <li key={meal.id}>{meal.name}</li>)
+  const listOfMeals = DUMMY_MEALS.map((meal) => (
+    <MealItem key={meal.id} meal={meal} />
+  ));
 
   return (
-    <Fragment>
-      <ul> {listOfMeals} </ul>
-    </Fragment>
+    <div className={classes.meals}>
+      <Card>
+        <ul> {listOfMeals} </ul>
+      </Card>
+    </div>
   );
 };
 
