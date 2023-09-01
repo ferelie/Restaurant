@@ -3,12 +3,14 @@ import { Fragment } from "react";
 import classes from "./Modal.module.css";
 
 const Bachdrop = (props) => {
-  return <div className={classes.backdrop} onClick={props.onClose}></div>;
+  const { onClose } = props;
+  return <div className={classes.backdrop} onClick={onClose}></div>;
 };
 const ModalOverlay = (props) => {
+  const { children } = props;
   return (
     <div className={classes.modal}>
-      <div className={classes.content}> {props.children} </div>
+      <div className={classes.content}> {children} </div>
     </div>
   );
 };
@@ -16,10 +18,11 @@ const ModalOverlay = (props) => {
 const portalEl = document.getElementById("overlays");
 
 const Modal = (props) => {
+  const { children, onClose } = props;
   return (
     <Fragment>
-      {createPortal(<Bachdrop onClose={props.onClose} />, portalEl)}
-      {createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalEl)}
+      {createPortal(<Bachdrop onClose={onClose} />, portalEl)}
+      {createPortal(<ModalOverlay>{children}</ModalOverlay>, portalEl)}
     </Fragment>
   );
 };
