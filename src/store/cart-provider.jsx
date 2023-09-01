@@ -36,7 +36,7 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === "REMOVE") {
-    const existingCartItemIndex = state.item.findIndex(
+    const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id
     );
 
@@ -67,14 +67,14 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "REMOVE", id: id });
   };
 
-  const cartCotext = {
+  const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemHandler,
     removeItem: removeItemHandler,
   };
   return (
-    <CartContext.Provider value={cartCotext}>{children}</CartContext.Provider>
+    <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>
   );
 };
 
