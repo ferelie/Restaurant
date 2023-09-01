@@ -6,8 +6,7 @@ const Bachdrop = (props) => {
   const { onClose } = props;
   return <div className={classes.backdrop} onClick={onClose}></div>;
 };
-const ModalOverlay = (props) => {
-  const { children } = props;
+const ModalOverlay = ({children}) => {
   return (
     <div className={classes.modal}>
       <div className={classes.content}> {children} </div>
