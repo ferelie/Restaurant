@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Restaurant/static/css/main.b12f80bb.css",
-    "main.js": "/Restaurant/static/js/main.5d04923b.js",
+    "main.js": "/Restaurant/static/js/main.3c0544bb.js",
     "static/media/meals.jpg": "/Restaurant/static/media/meals.2971f633fc1382581cbf.jpg",
     "index.html": "/Restaurant/index.html",
     "main.b12f80bb.css.map": "/Restaurant/static/css/main.b12f80bb.css.map",
-    "main.5d04923b.js.map": "/Restaurant/static/js/main.5d04923b.js.map"
+    "main.3c0544bb.js.map": "/Restaurant/static/js/main.3c0544bb.js.map"
   },
   "entrypoints": [
     "static/css/main.b12f80bb.css",
-    "static/js/main.5d04923b.js"
+    "static/js/main.3c0544bb.js"
   ]
 }
