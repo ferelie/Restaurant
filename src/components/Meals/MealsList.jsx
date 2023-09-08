@@ -25,6 +25,7 @@ const MealsList = () => {
       }
 
       setMeals(loadedMeals);
+      console.log("got the data from backend");
     };
 
     fetchMeals();
