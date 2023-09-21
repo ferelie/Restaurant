@@ -1,5 +1,5 @@
 import classes from "./Checkout.module.css";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Checkout = (props) => {
   const { exitHandler } = props;
