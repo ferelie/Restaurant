@@ -7,7 +7,7 @@ const Header = ({onCartButton}) => {
   return (
     <Fragment>
       <header className={classes.header}>
-        <h1>Welocme to Abooz's</h1>
+        <h1>Welocme to Happy Delights</h1>
         <CartButton onButtonClick={onCartButton} />
       </header>
 
